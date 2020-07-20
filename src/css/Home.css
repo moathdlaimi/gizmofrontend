@@ -1,0 +1,105 @@
+.tools-container{
+  border-top: 10px solid black;
+  border-radius: 5px;
+  width: 90%;
+  margin: 50px auto;
+  padding-top: 25px;
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 15px;
+}
+#mySearch{
+    display: flex;
+    width: 60%;
+    height: 35px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 1.2em;
+}
+
+.tool{
+  transition: 1s;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+
+}
+.tool:hover{
+  transition: 1s;
+  transform: translate(5px,0);
+  border: 1px solid black;
+}
+
+.tool-img{
+  width: 250px;
+  height: 250px;
+}
+
+.tool-info{
+  height: 150px;
+  padding: 5px;
+  text-align: left;
+  box-shadow:
+      inset 0 -3em 3em rgba(0,0,0,0.1),
+            0 0  0 2px rgb(255,255,255,0),
+            0.3em 0.3em 1em rgba(0,0,0,0.2);
+}
+
+
+a{
+  text-decoration:none;
+  color: black;
+}
+a:hover{
+  color: green;
+}
+
+.details-btn{
+  margin-top: 20px;
+  width: 120px;
+  padding: 7px;
+  border-radius: 10px;
+}
+
+.footer{
+  display: flex;
+  height: 100px;
+  border-top: 1px solid black;
+  line-height: 25px;
+  font-size: 12px;
+  justify-content: space-between;
+}
+
+.socialmedia-symbols {
+  width: 22px;
+  height: 22px;
+
+}
+
+.logo-symbol{
+  margin-top: 5px;
+  height: 70px;
+  width: 150px;
+  
+}
+@media only screen and (max-width: 665px) {
+  .tools-container{
+    display: grid;
+    text-align:center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 15px;
+  }
+}
+
+@media only screen and (min-width: 665px) and (max-width: 999px) {
+  .tools-container{
+    display: grid;
+    text-align:center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 15px;
+  }
+}
