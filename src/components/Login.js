@@ -13,7 +13,7 @@ class Login extends React.Component {
     createSession = (event) => {
       event.preventDefault();
       axios.post(
-          'https://gizmo-backend.herokuapp.com/sessions',
+          '/sessions',
           {
             name:this.state.username,
             password:this.state.password
