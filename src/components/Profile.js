@@ -15,7 +15,7 @@ class Profile extends React.Component {
   }
 
   componentDidMount = () => {
-      axios.get('/tools').then(
+      axios.get('https://gizmo-backend.herokuapp.com/tools').then(
         (response) => {
           this.setState({
               tools:response.data
@@ -37,7 +37,7 @@ class Profile extends React.Component {
   }
 
   logout = () => {
-      axios.delete('/sessions').then(
+      axios.delete('https://gizmo-backend.herokuapp.com/sessions').then(
         (response) => {
               this.props.history.push('/');
         }
@@ -47,7 +47,7 @@ class Profile extends React.Component {
   createTool = (event) => {
     event.preventDefault();
     axios.post(
-        '/tools',
+        'https://gizmo-backend.herokuapp.com/tools',
         {
           title:this.state.newTitle,
           img:this.state.newImg,
@@ -97,7 +97,7 @@ class Profile extends React.Component {
   }
 
   deleteTool = (event) => {
-    axios.delete('/tools/' + event.target.value).then(
+    axios.delete('https://gizmo-backend.herokuapp.com/tools/' + event.target.value).then(
       (response) => {
         this.setState({
             tools:response.data
@@ -110,7 +110,7 @@ updateTool = (event) => {
   event.preventDefault()
   const id = event.target.getAttribute('id')
   axios.put(
-    '/tools/' + id,
+    'https://gizmo-backend.herokuapp.com/tools/' + id,
     {
       title:this.state.updatedTitle,
       img:this.state.updatedImg,

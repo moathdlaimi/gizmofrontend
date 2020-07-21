@@ -14,8 +14,9 @@ class Home extends React.Component {
     tools:[]
   }
 
+
   componentDidMount = () => {
-      axios.get('/tools').then(
+      axios.get('https://gizmo-backend.herokuapp.com/tools').then(
         (response) => {
           this.setState({
               tools:response.data

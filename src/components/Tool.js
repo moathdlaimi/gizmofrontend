@@ -9,7 +9,7 @@ class Tool extends React.Component {
   }
   componentDidMount = () => {
         let id = this.props.match.params.id;
-        axios.get('/tools/'+id).then(
+        axios.get('https://gizmo-backend.herokuapp.com/tools/'+id).then(
             response => {
                 this.setState({
                   id:response.data.id,

@@ -11,7 +11,7 @@ class Signup extends React.Component {
   createUser = (event) => {
     event.preventDefault();
     axios.post(
-        '/users',
+        'https://gizmo-backend.herokuapp.com/users',
         {
           name:this.state.newName,
           password:this.state.newPassword,

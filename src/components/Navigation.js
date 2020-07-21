@@ -10,7 +10,7 @@ class Navigataion extends React.Component {
   }
 
   componentDidMount = () => {
-      axios.get('/sessions').then(
+      axios.get('https://gizmo-backend.herokuapp.com/sessions').then(
         (response) => {
           console.log('current user is ',response.data);
           this.setState({
