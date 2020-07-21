@@ -37,7 +37,7 @@ class Profile extends React.Component {
   }
 
   logout = () => {
-      axios.delete('/sessions').then(
+      axios.delete('https://gizmo-backend.herokuapp.com/sessions').then(
         (response) => {
               this.props.history.push('/');
         }
